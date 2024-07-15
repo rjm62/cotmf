@@ -1,7 +1,9 @@
 import  {Link} from 'react-router-dom'
+// import Contact from '../../pages/Contact/Contact'
 import '../../style/Header.css'
 
 function Header() {
+    const essai="OUI"
     return (
         <div className="headerContainer">
             <h1 className='notranslate'> Co.TMF</h1>
@@ -22,7 +24,7 @@ function Header() {
                     <p className='headerLink modal'>CONTACT</p>
                 </div>
                 <div className='mobileNav'>
-                    <i class="fa-solid fa-bars icon"></i>
+                    <i className="fa-solid fa-bars icon"></i>
                     <div className='choice'>
                         <p>STOCKAGE</p>
                         <p>TRANSPORT</p>
@@ -31,6 +33,7 @@ function Header() {
                     </div>
                 </div>  
             </nav>
+            {/* {essai=="OUI" ? <Contact /> : ("")} */}
         </div>
     )
 }

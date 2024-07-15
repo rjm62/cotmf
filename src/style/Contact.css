@@ -4,7 +4,7 @@
     align-items: center;
     position: absolute;
     z-index: 4;
-    height:100%;
+    height: 100%; 
     left: 50%;
     background-image: linear-gradient(to bottom, RGBa(0,0,0,0.75) 0%, Rgba(0,0,0,0.75) 100%);
     animation: pageApparition 0.9s forwards;
@@ -173,7 +173,9 @@
     background-color:#F8F5F5;
     border: 1px solid rgb(65, 61, 61);
     border-radius: 4px;
-    /* background-color: yellow; */
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 10px;
 }
 
 legend {
@@ -209,9 +211,10 @@ textarea {
     background-color:#F8F5F5;
     border: 1px solid rgb(65, 61, 61);
     border-radius: 4px;
+    font-size: 16px;
 }
 
-.button {
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,21 +223,24 @@ textarea {
     left: 110%;
     width: 135px;
     height: 40px;
-    background-color: #d72020;
+    background-color:#d72020;
     color: #ffffff;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgb(41, 41, 41);
-}
-
-.button p {
     font-size: 17px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .tintin {
     background-color: aqua;
     padding: 0;
 }
+
+/* input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: green; 
+} */
 
 
 

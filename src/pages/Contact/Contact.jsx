@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import {useContext} from 'react'
+import {DataContext} from '../../utils/Context/DataContext'
 import Dropdown from '../../components/Dropdown/Dropdown'
 import '../../style/Contact.css'
+
 function Contact() { 
     const [lastName, setLastName] = useState("")
     const [firstName, setFirstName] = useState("")
@@ -14,80 +17,90 @@ function Contact() {
     const [transportAsked, setTransportAsked] = useState(false)
     const [lastNameError, setLastNameError] = useState("")
     const [emailError, setEmailError] = useState("")
+    const [thanks, setThanks] = useState(true)
 
-const lastNameChangeAndCheck = (event) => {
-    event.preventDefault()
-    setLastName(event.target.value)
-    if(event.target.value.length>2) {
-        setLastNameCheck(0)
+    const {contactButton, setContactButton} = useContext(DataContext)
+
+    const contactPageClose = (event) => {
+        event.preventDefault()
+        console.log("BOUTON FERMETURE")
+        setContactButton(false)
     }
-    else {
-        setLastNameCheck(10)
+
+    const lastNameChangeAndCheck = (event) => {
+        event.preventDefault()
+        setLastName(event.target.value)
+        if(event.target.value.length>2) {
+            setLastNameCheck(0)
+        }
+        else {
+            setLastNameCheck(10)
+        }
     }
-}
 
-const emailChangeAndCheck = (event) => {
-    event.preventDefault()
-    setEmail(event.target.value)
-    console.log(event.target.value)
-    let regEmail=new RegExp("^[a-z0-9\.\-_]+[a-z0-9]*@[a-z0-9]{2,}\.[a-z\.\-_]+[a-z\-_]{2,}$", "i")
-    var check =(regEmail.test(event.target.value))
-    if(check=== true) {
-        setEmailCheck(0)
+    const emailChangeAndCheck = (event) => {
+        event.preventDefault()
+        setEmail(event.target.value)
+        console.log(event.target.value)
+        let regEmail=new RegExp("^[a-z0-9\.\-_]+[a-z0-9]*@[a-z0-9]{2,}\.[a-z\.\-_]+[a-z\-_]{2,}$", "i")
+        var check =(regEmail.test(event.target.value))
+        if(check=== true) {
+            setEmailCheck(0)
+        }
+        else {
+            setEmailCheck(20)
+        }
     }
-    else {
-        setEmailCheck(20)
+
+    const toggleStockageAsked = () => {
+        setStockageAsked(!stockageAsked)   
     }
-}
 
- const toggleStockageAsked = () => {
-    setStockageAsked(!stockageAsked)   
- }
-
- const toggleTransportAsked = () => {
-    setTransportAsked(!transportAsked)
- }
-
- const selectedStatut = (choice) => {
-    setStatut(choice)
- }
-
- const send = (event) => {
-    event.preventDefault()
-   const resultCheck = lastNameCheck + emailCheck
-
-    switch (resultCheck) {
-        case 0 :
-            setLastNameError("")
-            setEmailError( "")
-            return;
-
-        case 10 :
-            setLastNameError("veuillez entrer votre nom")
-            setEmailError( "")
-            return;
-
-        case 20 :
-            setLastNameError("")
-            setEmailError( "l'adresse mail n'est pas conforme")
-            return;
-
-        case 30 :
-            setLastNameError("veuillez entrer votre nom")
-            setEmailError( "l'adresse mail n'est pas conforme")
-
-            return;
-
-        default :
-            return;
+    const toggleTransportAsked = () => {
+        setTransportAsked(!transportAsked)
     }
- } 
 
+    const selectedStatut = (choice) => {
+        setStatut(choice)
+    }
+
+    const send = (event) => {
+        event.preventDefault()
+    const resultCheck = lastNameCheck + emailCheck
+
+        switch (resultCheck) {
+            case 0 :
+                setLastNameError("")
+                setEmailError( "")
+                setThanks(false)
+                return;
+
+            case 10 :
+                setLastNameError("veuillez entrer votre nom")
+                setEmailError( "")
+                return;
+
+            case 20 :
+                setLastNameError("")
+                setEmailError( "l'adresse mail n'est pas conforme")
+                return;
+
+            case 30 :
+                setLastNameError("veuillez entrer votre nom")
+                setEmailError( "l'adresse mail n'est pas conforme")
+
+                return;
+
+            default :
+                return;
+        }
+    } 
     
     return (
         <div className="pageContainer">
+            {thanks===true ? (
             <div className='exitFormInfosContainer'>
-                <div className='exitContainer'>
+                <div className='exitContainer' onClick={contactPageClose}>
                     <i className="fa-solid fa-xmark"></i>
                 </div>
                 <div className='formInfosContainer' >
@@ -140,7 +153,12 @@ const emailChangeAndCheck = (event) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> ) 
+            : (<div className='thankYou'>
+                 <div className='exitContainer' onClick={contactPageClose}>
+                    <i className="fa-solid fa-xmark"></i>
+                </div>
+                <p>Merci pour votre mail, nous vous répondrons dans les plus brefs délais</p></div>)}
         </div>
     )
 }

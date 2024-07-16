@@ -1,6 +1,10 @@
+import '../../style/Logistique.css'
+
 function Logistique() {
     return (
-        <p> Ici c'est la logistique</p>
+        <div className="logistiqueContainer">
+            <p> Ici c'est la logistique</p>
+        </div>
     )
 }
 

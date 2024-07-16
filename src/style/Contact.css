@@ -36,6 +36,28 @@
 
 }
 
+.thankYou {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 370px;
+    max-width: 370px;
+    height:22%;
+    min-height: 120px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.thankYou p {
+    text-align: left;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 0 20px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
 .exitContainer {
     display: flex;
     justify-content: flex-end;

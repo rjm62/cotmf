@@ -6,19 +6,22 @@ import Transport from './pages/Transport/Transport';
 import Logistique from './pages/Logistique/Logistique';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import {DataContextProvider} from './utils/Context/DataContext'
 
 function App() {
     return (
         <Router>
-            <Header />
-                <Routes>
-                    <Route path="/Co.TMF" element={<Navigate replace to="/"/>} />
-                    <Route path="/" element={<Accueil />} />
-                    <Route path="/Stockage" element={<Stockage />} />
-                    <Route path="/Transport" element={<Transport />} />
-                    <Route path="/Logistique" element={<Logistique />} />
-                </Routes>
-            <Footer />
+            <DataContextProvider>
+                <Header />
+                    <Routes>
+                        <Route path="/Co.TMF" element={<Navigate replace to="/"/>} />
+                        <Route path="/" element={<Accueil />} />
+                        <Route path="/Stockage" element={<Stockage />} />
+                        <Route path="/Transport" element={<Transport />} />
+                        <Route path="/Logistique" element={<Logistique />} />
+                    </Routes>
+                <Footer />
+            </DataContextProvider>
         </Router> 
     )
 }

@@ -1,11 +1,20 @@
+import {useContext, useEffect, useState} from 'react'
+import {DataContext} from '../../utils/Context/DataContext'
 import storagePicture from '../../assets/img/storagePicture.jpg'
 import transportPicture from '../../assets/img/transportPicture.jpg'
 import logisticsPicture from '../../assets/img/logisticsPicture.png'
 import Contact from '../Contact/Contact'
 import '../../style/Accueil.css'
 
+
 function Accueil() {
-const essai="OUI"
+    const {contactButton, setContactButton} = useContext(DataContext)
+    const [display, setDisplay] = useState("OFF")
+ 
+useEffect(() => {
+    contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
+}, [contactButton]) 
+
 
     return (
         <>
@@ -25,7 +34,7 @@ const essai="OUI"
                 <div className='filter'>   
                 </div>
             </figure>
-            {essai=="OUI" ? <Contact /> : ("")}
+            {display=="ON" ? <Contact /> : ("")}
         </div>
        
         </>

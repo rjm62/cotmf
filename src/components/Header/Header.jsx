@@ -1,9 +1,17 @@
+
 import  {Link} from 'react-router-dom'
-// import Contact from '../../pages/Contact/Contact'
+import {useContext} from 'react'
+import {DataContext} from '../../utils/Context/DataContext'
 import '../../style/Header.css'
 
 function Header() {
-    const essai="OUI"
+    const {contactButton, setContactButton} = useContext(DataContext)
+  
+    const openContactPage =(event) => {
+        event.preventDefault()
+        setContactButton(!contactButton)
+    }
+
     return (
         <div className="headerContainer">
             <h1 className='notranslate'> Co.TMF</h1>
@@ -21,7 +29,7 @@ function Header() {
                     <Link to="/Logistique" className='headerLink'>LOGISTIQUE</Link>
                 </div>
                 <div className="contactModal">
-                    <p className='headerLink modal'>CONTACT</p>
+                    <p className='headerLink modal' onClick={(e) => openContactPage(e)}>CONTACT</p>
                 </div>
                 <div className='mobileNav'>
                     <i className="fa-solid fa-bars icon"></i>
@@ -29,11 +37,10 @@ function Header() {
                         <p>STOCKAGE</p>
                         <p>TRANSPORT</p>
                         <p>LOGISTIQUE</p>
-                        <p>CONTACT</p>
+                        <p >CONTACT</p>
                     </div>
                 </div>  
             </nav>
-            {/* {essai=="OUI" ? <Contact /> : ("")} */}
         </div>
     )
 }

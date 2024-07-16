@@ -23,6 +23,7 @@
     justify-content: space-between;
     align-items: center;
     width: 460px;
+    cursor: pointer;
     
 }
 
@@ -35,7 +36,6 @@
 }
 
 .copyright {
-    cursor: pointer;
     font-size: 13px;
     padding-top: 18px;
 

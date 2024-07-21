@@ -1,6 +1,10 @@
+import '../../style/Transport.css'
+
 function Transport() {
     return (
-        <p> Ici c'est le transport</p>
+        <div className="transportContainer">
+            <p> Ici c'est le transport</p>
+        </div>
     )
 }
 

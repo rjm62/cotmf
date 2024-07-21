@@ -18,6 +18,7 @@ function Dropdown({selectedStatut}) {
         event.preventDefault()
         setSelectionDisplay(event.target.value)
         selectedStatut(event.target.value)
+        setOpenCollapse(true)
         console.log(event.target.value)
 
     }

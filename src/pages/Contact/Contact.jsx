@@ -1,8 +1,9 @@
-import { useState } from 'react'
-import {useContext} from 'react'
-import {DataContext} from '../../utils/Context/DataContext'
-import Dropdown from '../../components/Dropdown/Dropdown'
-import '../../style/Contact.css'
+import { useState, useRef } from 'react';
+import {useContext} from 'react';
+import {DataContext} from '../../utils/Context/DataContext';
+import Dropdown from '../../components/Dropdown/Dropdown';
+import emailjs from '@emailjs/browser';
+import '../../style/Contact.css';
 
 function Contact() { 
     const [lastName, setLastName] = useState("")
@@ -18,8 +19,20 @@ function Contact() {
     const [lastNameError, setLastNameError] = useState("")
     const [emailError, setEmailError] = useState("")
     const [thanks, setThanks] = useState(true)
-
+    const [spinner, setSpinner] = useState(true)
     const {contactButton, setContactButton} = useContext(DataContext)
+    
+    const [sendMessage, setSendMessage] = useState("En cours de traitement...")
+    const serviceId = 'service_5goaltg'
+    const templateId = 'template_odf40lg'
+    const publicKey = 'Ur_I_y3LsHvbROGoK'
+
+    const templateParams = {
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+statut,
+        from_email: email,
+        to_name: 'TINTIN',
+        message :message,
+    }
 
     const contactPageClose = (event) => {
         event.preventDefault()
@@ -31,10 +44,11 @@ function Contact() {
         event.preventDefault()
         setLastName(event.target.value)
         if(event.target.value.length>2) {
-            setLastNameCheck(0)
+            setLastNameCheck(0);
+            setLastNameError("");
         }
         else {
-            setLastNameCheck(10)
+            setLastNameCheck(10);
         }
     }
 
@@ -45,7 +59,8 @@ function Contact() {
         let regEmail=new RegExp("^[a-z0-9\.\-_]+[a-z0-9]*@[a-z0-9]{2,}\.[a-z\.\-_]+[a-z\-_]{2,}$", "i")
         var check =(regEmail.test(event.target.value))
         if(check=== true) {
-            setEmailCheck(0)
+            setEmailCheck(0);
+            setEmailError("");
         }
         else {
             setEmailCheck(20)
@@ -66,13 +81,39 @@ function Contact() {
 
     const send = (event) => {
         event.preventDefault()
-    const resultCheck = lastNameCheck + emailCheck
+
+        const resultCheck = lastNameCheck + emailCheck
 
         switch (resultCheck) {
             case 0 :
                 setLastNameError("")
                 setEmailError( "")
                 setThanks(false)
+
+                emailjs.send(serviceId, templateId, templateParams, publicKey)
+                    .then(
+                        (response) => {
+                            console.log('SUCCESS!', response);
+                        },
+                        (error) => {
+                            console.log('FAILED...', error.text);
+                        },
+                    );
+                emailjs.send('service_5goaltg', 'template_odf40lg',templateParams, 
+                    'Ur_I_y3LsHvbROGoK')
+                     .then(
+                       (response) => {
+                         console.log('SUCCESS!', response);
+                         setSendMessage("nous avons bien reçu votre message, vous allez recevoir un mail de confirmation");
+                         setSpinner(false)
+                       },
+                       (error) => {
+                         console.log('FAILED...', error.text);
+                         setSendMessage("Désolé un problème dans l'envoi est survenu, veuillez réesayer ou appeler au 06-73-04-36-16");
+                         setSpinner(false)
+                       },
+                     );
+
                 return;
 
             case 10 :
@@ -94,6 +135,7 @@ function Contact() {
             default :
                 return;
         }
+
     } 
     
     return (
@@ -158,7 +200,13 @@ function Contact() {
                  <div className='exitContainer' onClick={contactPageClose}>
                     <i className="fa-solid fa-xmark"></i>
                 </div>
-                <p>Merci pour votre mail, nous vous répondrons dans les plus brefs délais</p></div>)}
+                <div className='messageContainer'>
+                    <p>{sendMessage}</p>
+                    {spinner ===true ? <div className='spinnerContainer'>
+                        <div className='spinner'> </div>
+                    </div> : ""}
+                </div>
+            </div>)}
         </div>
     )
 }

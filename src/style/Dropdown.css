@@ -80,3 +80,9 @@
     margin-left: -30px;
     text-align: left;
 }
+
+@media screen and (max-width:800px) {
+    .collapse {
+        width: 240px;
+    }
+}

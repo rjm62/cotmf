@@ -1,9 +1,103 @@
 .transportContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
-    background-color: orange;
+    min-height: 650px;
+    margin-bottom: 0;
+}
+
+.transportContainer img {
+    position: absolute;
+    width: 100%;
+    height:650px;
+    object-fit: cover;
+}
+
+.transportContainer figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    line-height: 1rem;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #000000;
+    background-image: linear-gradient(to bottom, RGBa(255,255,255,0) 0%, RGBa(255,255,255,0) 50%, RGBa(255,255,255,0.7) 70%, Rgba(255,255,255,0.4) 95%, Rgba(255,255,255,0) 100%);
+}
+
+.transportContainer figcaption p {
+    width: 400px;
+    line-height: 2rem;
+    margin-top: 5px;
+    margin-right: 80px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    /* background-color: yellow; */
+}
+
+.transportContainer figcaption .gap p {
+   line-height: 0.6rem;
+   margin-top: 0;
+    
+    
+}
+
+@media screen and (max-width:1200px) {
+    .transportContainer figcaption p {
+        width: 400px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .transportContainer figcaption p {
+        width: 380px;
+        margin-right: 5px;
+         /* background-image: linear-gradient(to bottom, RGBa(255,255,255,0.6) 0%, RGBa(255,255,255,0.6) 25%, Rgba(255,255,255,0.6) 35%, Rgba(255,255,255,0.6) 50%); */
+    }
+}
+
+@media screen and (max-width:920px) {
+    .transportContainer figcaption {
+        background-image: linear-gradient(to bottom, RGBa(255,255,255,0.8) 0%, Rgba(255,255,255,0.8) 100%);
+    }
+}
+
+@media screen and (max-width:450px) {
+    .transportContainer {
+        min-height: 500px;
+    }
+
+    .transportContainer img {
+        height: 500px;
+    }
+
+    .transportContainer figcaption{
+        background-image: linear-gradient(to bottom, RGBa(255,255,255,0.8) 0%, Rgba(255,255,255,0.8) 100%);
+        height: 500px;
+    }
+
+    /* .transportContainer figcaption p {
+        width: 300px;
+        margin-right:  auto;
+        font-size: 13px;
+        font-weight: 500px;
+        padding: 0 5px;
+} */
+
+    .transportContainer figcaption gap p {
+        width: 300px;
+        margin-right:  auto;
+        font-size: 13px;
+        font-weight: 500px;
+        padding: 0 5px;
+}
 }

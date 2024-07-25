@@ -208,8 +208,8 @@
     width: 50%;
     min-height: 400px;
     height: auto;
-    /* background-color: green;    */
     font-size: 16px;
+    /* background-color: orange;    */
 }
 
 .error {
@@ -250,6 +250,7 @@ legend {
     margin-left: 40px;
     margin-top: 10px;
     margin-bottom: 5px;
+    /* background-color: aquamarine; */
 }
 
 .checkboxField {
@@ -269,6 +270,7 @@ legend {
 
 .message {
     height: 170px;
+    /* background-color: green; */
 }
 
 textarea {
@@ -324,6 +326,10 @@ button {
 }
 
 @media screen and (max-width:800px) {
+    /* .pageContainer {
+        height: 100%;
+    } */
+
     .exitFormInfosContainer {
         width:300px;
     }
@@ -331,7 +337,33 @@ button {
     .formInfosContainer {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        margin-left: 0;
+        width: 100%;
+    } 
+    
+    .field {
+        margin-left: 20px;
+    }
 
-    }  
+    .message {
+        width: 60%;
+    }
+
+    legend {
+        margin-left: 20px;
+        width: 200px;
+    }
+
+    button {
+        position: static;
+        margin-left: 65px;
+        margin-top: 20px;
+    }
+
+    .infos {
+        width: 240px;
+        margin-top: 50px;
+        margin-left: 20px;
+    }
 } 

@@ -1,9 +1,63 @@
 .stockageContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    min-height: 650px;
+    margin-bottom: 0;
+}
+
+.stockageContainer img {
+    position: absolute;
+    width: 50%;
+    height:650px;
+    object-fit: cover;
+}
+
+.stockageContainer figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    line-height: 1rem;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #000000;
+    /* background-image: linear-gradient(to bottom, RGBa(255,255,255,0.6) 0%, RGBa(255,255,255,0.6) 25%, Rgba(255,255,255,0.6) 35%, Rgba(255,255,255,0.6) 50%); */
+}
+
+.stockageContainer figcaption p {
+    width: 500px;
+    line-height: 2rem;
+    margin-top: 5px;
+    margin-right: 120px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    /* background-color: red; */
+}
+
+.stockageContainer figcaption .gap p {
+   line-height: 0.6rem;
+   margin-top: 0;
+    
+    
+}
+
+@media screen and (max-width:1200px) {
+    .stockageContainer figcaption p {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .stockageContainer figcaption p {
+        width: 300px;
+    }
 }

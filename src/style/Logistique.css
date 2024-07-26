@@ -10,7 +10,6 @@
     height: 100%;
     min-height: 650px;
     margin-bottom: 0;
-
 }
 
 .logistiqueContainer figure {
@@ -18,12 +17,12 @@
     margin: auto;
     margin-top: 125px;
     width: 70%;
-    height: 400px;
+    height: 296px;
     background-color: #ffffff;
 }
 
 .logistiqueContainer figure img {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,12 +31,13 @@
 }
 
 .logistiqueContainer figure figcaption {
-    position: absolute;
-    top: 340px;
+    position: relative;
+    /* top: 340px; */
     bottom: 0;
     width: 100%;
     font-size: 18px;
     color: #000000;
+    /* background-color: blue; */
 }
 
 @media screen and (max-width:1200px) {

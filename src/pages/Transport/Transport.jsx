@@ -1,7 +1,17 @@
-import camion from '../../assets/img/20.png'
+import {useContext, useEffect, useState} from 'react'
+import {DataContext} from '../../utils/Context/DataContext'
+import camion from '../../assets/img/transport.png'
+import Contact from '../Contact/Contact'
 import '../../style/Transport.css'
 
 function Transport() {
+    const {contactButton, setContactButton} = useContext(DataContext)
+    const [display, setDisplay] = useState("OFF")
+ 
+    useEffect(() => {
+        contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
+    }, [contactButton]) 
+
     return (
         <div className="transportContainer"> 
             <img src={camion} alt= "ttt" />
@@ -19,6 +29,7 @@ function Transport() {
                 <p></p>
                 <p>Transport partiel ou complet</p>
             </figcaption>
+            {display=="ON" ? <Contact />: ("")}
         </div>
     )
 }

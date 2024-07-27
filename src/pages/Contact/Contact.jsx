@@ -156,6 +156,7 @@ function Contact() {
                             <label htmlFor='firstName'>Prénom</label>
                             <input type='text' id='lastName' name='lastName' onChange={(e) => setFirstName(e.target.value)} />
                         </div>
+                        <p className='error' > &nbsp;</p>
                         <div className='field'>
                             <label htmlFor='mail'>Adresse mail</label>
                             <input type='email' id='mail' name='mail' onChange={emailChangeAndCheck} />

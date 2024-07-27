@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from 'react'
 import {DataContext} from '../../utils/Context/DataContext'
-import photoPageStockage from '../../assets/img/stockage3.png'
+import photoPageStockage from '../../assets/img/stockage.png'
 import Contact from '../Contact/Contact'
 import  '../../style/Stockage.css'
 
@@ -8,13 +8,12 @@ function Stockage() {
     const {contactButton, setContactButton} = useContext(DataContext)
     const [display, setDisplay] = useState("OFF")
  
-useEffect(() => {
-    contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
-}, [contactButton]) 
+    useEffect(() => {
+        contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
+    }, [contactButton]) 
 
 
     return (
-        <>
         <div className="stockageContainer"> 
              <img src={photoPageStockage} alt= "ttt" />
              <figcaption>
@@ -28,8 +27,6 @@ useEffect(() => {
             </figcaption>
             {display=="ON" ? <Contact />: ("")}
         </div>
-        {/* {display=="ON" ? <div className='milou'></div>: ("")}  */}
-        </>
     )
 }
 

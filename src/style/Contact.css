@@ -16,12 +16,12 @@
 .exitFormInfosContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* margin-top: 30px; */
-    margin-bottom: 42px;
+    /* margin-top: 40px;
+    margin-bottom: 42px; */
     width: 765px;
-    height:85%;
+    height:92%;
     /* max-height: 550px; */
     border-radius: 10px;
     background-color: #ffffff;
@@ -53,14 +53,6 @@
     padding: 12px 0;
     border-radius: 10px;
     background-color: #ffffff;
-}
-
-.exitContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 10%;
-    /* background-color: aqua; */
 }
 
 .messageContainer {
@@ -112,8 +104,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 60px;
+    padding-top: 10px;
     width: 100%;
+    height: auto;
     /* background-color: yellow; */
 }
 
@@ -143,11 +136,12 @@
 
 .infos {
     font-size: 20px;
+    /* background-color: #d72020; */
 }
 
 .title {
     /* background-color: yellow; */
-    margin-top: 20px;
+    margin-top: 70px;
     font-weight: 700;
 }
 
@@ -184,6 +178,7 @@
 .location p {
     font-family:"Inter";
     font-size: 15px;
+    text-align: left;
 }
 
 .email {
@@ -223,6 +218,7 @@
     font-size: 12px;
     margin-left: 40px;
     color: red;
+    /* background-color: green; */
    
 }
 
@@ -334,7 +330,7 @@ button {
 
     .formInfosContainer {
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
         margin-left: 0;
         width: 100%;
@@ -356,14 +352,18 @@ button {
     button {
         position: static;
         margin-left: 65px;
-        margin-top: 20px;
+        /* margin-top: 10px; */
     }
 
     .infos {
         width: 240px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         margin-left: 20px;
     }
+
+    /* .title{
+        margin-top: 70px;
+    } */
 } 
 
 @media screen and (max-width:600px) {

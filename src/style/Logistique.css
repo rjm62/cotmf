@@ -15,7 +15,7 @@
 .logistiqueContainer figure {
     display: block;
     margin: auto;
-    margin-top: 125px;
+    /* margin-top: 125px; */
     width: 70%;
     height: 296px;
     background-color: #ffffff;
@@ -37,7 +37,6 @@
     width: 100%;
     font-size: 18px;
     color: #000000;
-    /* background-color: blue; */
 }
 
 @media screen and (max-width:1200px) {

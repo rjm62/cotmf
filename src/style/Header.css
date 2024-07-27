@@ -40,13 +40,11 @@ h1 {
 }
 
 .headerMobileLink {
-    /* position: absolute; */
     color: #ffffff;
     text-decoration: none;
     font-family:'Inter'; 
     font-weight:bolder;
     padding: 8px 30px;
-    /* background-color: green; */
 }
 
 nav :hover{
@@ -77,7 +75,6 @@ nav :hover{
     min-height: 50px;
     height: auto;
     overflow: hidden;
-    /* background-color: red; */
 }
 
 .hamburgerContainer i {
@@ -98,8 +95,6 @@ nav :hover{
     color: #ffffff;
     font-size: 30px;
     cursor: pointer;
-    /* background-color: green; */
-
 }
 
  .mouse {
@@ -123,13 +118,10 @@ nav :hover{
     height: 250px;
     overflow: hidden;
     background-color: #000000;
-    /* background-color: yellow; */
     animation: hamburgerMenu 0.5s ease-out forwards;
 }
 
 @keyframes hamburgerMenu {
-    /* 0% {width: 400px}
-    100% {width: 200px} */
     0% {margin-left: 200px}
     100% {margin-left: 0%}
 }
@@ -137,8 +129,6 @@ nav :hover{
 .element {
     color: red;
 }
-
-
 
 @media screen and (max-width:1024px) {
     .navHeader {

@@ -303,13 +303,7 @@ button {
     cursor: pointer;
 }
 
-.tintin {
-    background-color: aqua;
-    padding: 0;
-}
-
 @media screen and (max-width: 820px) {
-  
     .form {
         width: 48%;
     }
@@ -352,23 +346,16 @@ button {
     button {
         position: static;
         margin-left: 65px;
-        /* margin-top: 10px; */
     }
 
     .infos {
         width: 240px;
-        /* margin-top: 50px; */
         margin-left: 20px;
     }
-
-    /* .title{
-        margin-top: 70px;
-    } */
 } 
 
 @media screen and (max-width:600px) {
     .exitFormInfosContainer {
         width:300px;
     }
-
 }

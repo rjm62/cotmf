@@ -28,15 +28,14 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+statut,
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'statut: '+statut,
         from_email: email,
-        to_name: 'TINTIN',
+        to_name: 'Phalempin',
         message :message,
     }
 
     const contactPageClose = (event) => {
         event.preventDefault()
-        console.log("BOUTON FERMETURE")
         setContactButton(false)
     }
 
@@ -55,7 +54,6 @@ function Contact() {
     const emailChangeAndCheck = (event) => {
         event.preventDefault()
         setEmail(event.target.value)
-        console.log(event.target.value)
         let regEmail=new RegExp("^[a-z0-9\.\-_]+[a-z0-9]*@[a-z0-9]{2,}\.[a-z\.\-_]+[a-z\-_]{2,}$", "i")
         var check =(regEmail.test(event.target.value))
         if(check=== true) {
@@ -82,7 +80,7 @@ function Contact() {
     const send = (event) => {
         event.preventDefault()
 
-        const resultCheck = lastNameCheck + emailCheck
+    const resultCheck = lastNameCheck + emailCheck
 
         switch (resultCheck) {
             case 0 :
@@ -91,16 +89,6 @@ function Contact() {
                 setThanks(false)
 
                 emailjs.send(serviceId, templateId, templateParams, publicKey)
-                    .then(
-                        (response) => {
-                            console.log('SUCCESS!', response);
-                        },
-                        (error) => {
-                            console.log('FAILED...', error.text);
-                        },
-                    );
-                emailjs.send('service_5goaltg', 'template_odf40lg',templateParams, 
-                    'Ur_I_y3LsHvbROGoK')
                      .then(
                        (response) => {
                          console.log('SUCCESS!', response);
@@ -113,7 +101,6 @@ function Contact() {
                          setSpinner(false)
                        },
                      );
-
                 return;
 
             case 10 :

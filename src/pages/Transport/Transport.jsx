@@ -14,7 +14,7 @@ function Transport() {
 
     return (
         <div className="transportContainer"> 
-            <img src={camion} alt= "ttt" />
+            <img src={camion} alt= "camion sur une route" />
             <figcaption>
                 <div className='gap'>
                     <p>nos véhicules livrent dans les:</p>

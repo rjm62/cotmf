@@ -17,15 +17,15 @@ useEffect(() => {
     return (
         <div className="logistiqueContainer">
             <figure>
-                <img src={logistique1} alt="" />
+                <img src={logistique1} alt="chargement d'un container" />
                 <figcaption>Dépotage empotage de containers</figcaption>
             </figure>
             <figure>
-                <img src={logistique2} alt="" />
+                <img src={logistique2} alt="photo d'une palette de cartons" />
                 <figcaption>Reconditionnement de palettes</figcaption>
             </figure>
             <figure>
-                <img src={logistique3} alt="" />
+                <img src={logistique3} alt="identification d'une palette filmé par une personne" />
                 <figcaption>Préparation de commandes</figcaption>
             </figure>
             {display=="ON" ? <Contact /> : ("")}

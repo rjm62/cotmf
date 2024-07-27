@@ -15,7 +15,7 @@ function Stockage() {
 
     return (
         <div className="stockageContainer"> 
-             <img src={photoPageStockage} alt= "ttt" />
+             <img src={photoPageStockage} alt= "hangar avec des palettes" />
              <figcaption>
                 <p>Situation géographique: Desvres</p>
                 <p>A 25 minutes de l'A16 et de l'A26</p>

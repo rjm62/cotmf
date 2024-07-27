@@ -27,15 +27,3 @@ function App() {
 }
 
 export default App;
-
-/* <Router>
-<Header />
-<Routes>
-    <Route path="/" element={<Accueil />} />
-    <Route path="/Stockage" element={<Stockage />} />
-    <Route path="/Transport" element={<Transport />} />
-    <Route path="/Logistique" element={<Logistique />} />
-    <Route path="/Contact" element={<Contact />} />
-</Routes>
-<Footer />
-</Router> */

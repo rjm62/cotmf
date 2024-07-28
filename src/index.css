@@ -9,9 +9,9 @@
   height: 100svh;
   height: 100%;
   min-height: 100%;
-  text-align: center; */
+  text-align: center;
   background-color: #ffffff;
-  background-color: yellow;
+  background-color: yellow; */
 }
 
 @media screen and (max-width:824px) and (min-width:320px) {

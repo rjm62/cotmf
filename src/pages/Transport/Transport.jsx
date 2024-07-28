@@ -17,7 +17,7 @@ function Transport() {
             <img src={camion} alt= "camion sur une route" />
             <figcaption>
                 <div className='gap'>
-                    <p>nos véhicules livrent dans les:</p>
+                    <p>Nos véhicules livrent dans les:</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Hauts de France</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Régions Parisiennes et Ile de France</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Belgique</p>

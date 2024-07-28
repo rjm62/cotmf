@@ -14,7 +14,7 @@ function App() {
             <DataContextProvider>
                 <Header />
                     <Routes>
-                        <Route path="/Co.TMF" element={<Navigate replace to="/"/>} />
+                        <Route path="/cotmf" element={<Navigate replace to="/"/>} />
                         <Route path="/" element={<Accueil />} />
                         <Route path="/Stockage" element={<Stockage />} />
                         <Route path="/Transport" element={<Transport />} />

@@ -92,12 +92,12 @@ function Contact() {
                      .then(
                        (response) => {
                          console.log('SUCCESS!', response);
-                         setSendMessage("nous avons bien reçu votre message, vous allez recevoir un mail de confirmation");
+                         setSendMessage("Nous avons bien reçu votre message, vous allez recevoir un mail de confirmation.");
                          setSpinner(false)
                        },
                        (error) => {
                          console.log('FAILED...', error.text);
-                         setSendMessage("Désolé un problème dans l'envoi est survenu, veuillez réesayer ou appeler au 06-73-04-36-16");
+                         setSendMessage("Désolé un problème dans l'envoi est survenu, veuillez réessayer ou appeler au 06-73-04-36-16.");
                          setSpinner(false)
                        },
                      );
@@ -154,7 +154,7 @@ function Contact() {
                             <Dropdown selectedStatut={selectedStatut} />
                         </div>
                         <p className='error'>&nbsp;</p>
-                        <legend>Votre demande concerne:</legend>
+                        <legend>Votre demande concerne :</legend>
                         <div className='checkboxField'>
                             <input type='checkbox' id='stockage'name='demande' value= {stockageAsked}  onChange={toggleStockageAsked}/>
                             <label htmlFor='stockage'>Stockage</label>

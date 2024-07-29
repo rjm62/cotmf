@@ -15,19 +15,17 @@ function Transport() {
     return (
         <div className="transportContainer"> 
             <img src={camion} alt= "camion sur une route" />
-            <figcaption>
-                <div className='gap'>
-                    <p>Nos véhicules livrent dans les:</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Hauts de France</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Régions Parisiennes et Ile de France</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Belgique</p>
-                </div>
-                <p></p>
-                <p></p>
-                <p>Nous effectuons également l'affrétement sur toute la France et les pays limitrophes</p>
-                <p></p>
-                <p></p>
-                <p>Transport partiel ou complet</p>
+            <figcaption>        
+                    <p>Transport partiel ou complet.</p>
+                    <p></p>
+                    <p></p>
+                    <p>Nous effectuons vos livraisons dans :</p>
+                    <p>- Les hauts de France</p>
+                    <p>- La région Parisienne et l'Île de France</p>
+                    <p>- La Belgique</p>
+                    <p></p>
+                    <p></p>
+                    <p>Nous réalisons également votre affrètement sur toute la France et les pays limitrophes.</p>
             </figcaption>
             {display=="ON" ? <Contact />: ("")}
         </div>

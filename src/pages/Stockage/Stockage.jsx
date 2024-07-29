@@ -17,13 +17,17 @@ function Stockage() {
         <div className="stockageContainer"> 
              <img src={photoPageStockage} alt= "hangar avec des palettes" />
              <figcaption>
-                <p>Situation géographique: Desvres</p>
+                <p className='withDecoration'>Notre entrepôt idéalement situé à Desvres :</p>
                 <p>25 minutes de l'A16 et de l'A26</p>
-                <p>2H30 de Paris</p>
-                <p>Capacité de stockage interne:  500 palettes 80X120</p>
-                <p>Capacité de stockage externe: 2000m2</p>
-                <p>Surveillance du site 24H/24H</p>
-                <p>Zone entièrement fermée</p>
+                <p>2H30 de Paris et de Bruxelles</p>
+                <p></p>
+                <p></p>
+                <p className='withDecoration'>Une capacité de stockage :</p>
+                <p>- Interne de 500 palettes 80 X 120</p>
+                <p>- Externe de 2000 m2</p>
+                <p></p>
+                <p></p>
+                <p>Zone sécurisée surveillée 24h/24</p>
             </figcaption>
             {display=="ON" ? <Contact />: ("")}
         </div>

@@ -18,7 +18,7 @@ useEffect(() => {
         <div className="logistiqueContainer">
             <figure>
                 <img src={logistique1} alt="chargement d'un container" />
-                <figcaption>Dépotage empotage de containers</figcaption>
+                <figcaption>Dépotage/Empotage de conteneurs</figcaption>
             </figure>
             <figure>
                 <img src={logistique2} alt="photo d'une palette de cartons" />

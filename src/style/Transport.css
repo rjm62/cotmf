@@ -68,6 +68,8 @@
 @media screen and (max-width:820px) {
     .transportContainer {
         min-height: 963px;
+        background-color: aquamarine;
+        
     }
 }
 
@@ -90,7 +92,8 @@
 
     .transportContainer figcaption p {
         width: 300px;
-        margin-right:  auto;
+        /* margin-right:  auto; */
+        margin: 8px auto;
         font-size: 15px;
         font-weight: 500px;
         padding: 0 5px;

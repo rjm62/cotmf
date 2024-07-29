@@ -40,7 +40,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-align: left;
-    /* background-color: aquamarine; */
 }
 
 .withDecoration {
@@ -81,12 +80,12 @@
 @media screen and (max-width:820px) {
     .stockageContainer {
         min-height: 963px;
+        align-items: flex-start;
     }    
 }
 
 @media screen and (max-width:665px) {
     .stockageContainer figcaption {
-        /* align-items: center; */
         text-align: center;
          background-image: linear-gradient(to bottom, RGBa(255,255,255,0.75) 0%, Rgba(255,255,255,0.75) 100%);
     }
@@ -99,7 +98,7 @@
 
     .stockageContainer figcaption p {
        font-size: 15px;
-       margin-left: 20px;
+       /* margin-left: 20px; */
        padding-left: 10px;
     }
 }

@@ -86,7 +86,8 @@
 
 @media screen and (max-width:665px) {
     .stockageContainer figcaption {
-        align-items: center;
+        /* align-items: center; */
+        text-align: center;
          background-image: linear-gradient(to bottom, RGBa(255,255,255,0.75) 0%, Rgba(255,255,255,0.75) 100%);
     }
 
@@ -97,8 +98,8 @@
     }
 
     .stockageContainer figcaption p {
-       font-size: 16px;
-       margin-left: 10px;
+       font-size: 15px;
+       margin-left: 20px;
        padding-left: 10px;
     }
 }

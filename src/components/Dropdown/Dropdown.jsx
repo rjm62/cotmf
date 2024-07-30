@@ -4,7 +4,7 @@ import '../../style/Dropdown.css'
 function Dropdown({selectedStatut}) {
     const [openCollapse, setOpenCollapse]= useState(true);
     const [selectionDisplay, setSelectionDisplay] =useState("")
-    const statut = ["Chef d'entreprise", "particulier"]
+    const statut = ["Chef d'entreprise", "Particulier"]
 
     const closeCollapseContent = () => {
         setOpenCollapse(true)

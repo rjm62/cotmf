@@ -15,7 +15,7 @@ function App() {
                 <Header />
                     <Routes>
                         {/* <Route path="/cotmf" element={<Navigate replace to="/"/>} /> */}
-                        <Route path="/cotmf" element={<Accueil />} />
+                        <Route path="/cotmf/" element={<Accueil />} />
                         <Route path="/Stockage" element={<Stockage />} />
                         <Route path="/Transport" element={<Transport />} />
                         <Route path="/Logistique" element={<Logistique />} />

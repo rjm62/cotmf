@@ -14,10 +14,10 @@ function App() {
             <DataContextProvider>
                 <Header />
                     <Routes>
-                        <Route path="/" element={<Navigate replace to="/cotmf"/>} />
-                        <Route path="/cotmf" element={<Accueil />} />
-                        <Route path="/cotmf/Stockage" element={<Stockage />} />
-                        <Route path="/cotmf/Transport" element={<Transport />} />
+                        <Route path="/" element={<Navigate replace to="/cotmf/"/>} />
+                        <Route path="cotmf" element={<Accueil />} />
+                        <Route path="cotmf/Stockage" element={<Stockage />} />
+                        <Route path="cotmf/Transport" element={<Transport />} />
                         <Route path="cotmf//Logistique" element={<Logistique />} />
                     </Routes>
                 <Footer />

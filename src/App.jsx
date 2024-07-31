@@ -10,7 +10,7 @@ import {DataContextProvider} from './utils/Context/DataContext'
 
 function App() {
     return (
-        <Router>
+        <Router basename="/cotmf/">
             <DataContextProvider>
                 <Header />
                     <Routes>

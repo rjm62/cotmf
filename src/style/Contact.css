@@ -18,16 +18,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 40px;
-    margin-bottom: 42px; */
     width: 765px;
     height:92%;
-    /* max-height: 550px; */
     border-radius: 10px;
     background-color: #ffffff;
     opacity: 0;
     animation: formApparition 0.7s ease-out 0.9s forwards;
-    /* background-color: green; */
 }
 
 @keyframes pageApparition {
@@ -327,10 +323,6 @@ button {
         width: 240px;
         margin-left: 20px;
     }
-
-    /* .infos {
-    width: 52%;
-   } */
 
 } 
 

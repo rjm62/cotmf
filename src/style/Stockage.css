@@ -81,7 +81,12 @@
     .stockageContainer {
         min-height: 963px;
         align-items: flex-start;
-    }    
+    } 
+    
+    .stockageContainer figcaption p {
+        margin: 15px auto;
+        font-size: 15px;
+        }
 }
 
 @media screen and (max-width:665px) {
@@ -98,7 +103,6 @@
 
     .stockageContainer figcaption p {
        font-size: 15px;
-       /* margin-left: 20px; */
        padding-left: 10px;
     }
 }

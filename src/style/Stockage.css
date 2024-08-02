@@ -26,7 +26,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    min-height: 633px;
+    min-height: 628px;
     line-height: 1rem;
     margin-top: 5px;
     color: #000000;
@@ -92,7 +92,7 @@
 @media screen and (max-width:665px) {
     .stockageContainer figcaption {
         text-align: center;
-         background-image: linear-gradient(to bottom, RGBa(255,255,255,0.75) 0%, Rgba(255,255,255,0.75) 100%);
+         background-image: linear-gradient(to bottom, RGBa(255,255,255,0.75) 0%, Rgba(255,255,255,0.75) 95%, Rgba(255,255,255,0) 100%);
     }
 
     .stockageContainer img {

@@ -156,9 +156,9 @@ function Contact() {
                         <p className='error'>&nbsp;</p>
                         <legend>Votre demande concerne :</legend>
                         <div className='checkboxField'>
-                            <input type='checkbox' id='stockage'name='demande' value= {stockageAsked}  onChange={toggleStockageAsked}/>
+                            <input type='checkbox' id='stockage'name='demande' className='checkbox' value= {stockageAsked}  onChange={toggleStockageAsked}/>
                             <label htmlFor='stockage'>Stockage</label>
-                            <input type='checkbox' id='transport' name='demande' value= {transportAsked} onChange={toggleTransportAsked} />
+                            <input type='checkbox' id='transport' name='demande' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
                             <label htmlFor='transport'>Transport</label>
                         </div>
                         <div className='field message'>

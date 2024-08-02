@@ -242,6 +242,10 @@ legend {
     width: 250px;
 }
 
+.checkbox {
+    cursor: pointer;
+}
+
 .checkboxField label {
     display: flex;
     margin-right: 30Px;
@@ -311,7 +315,7 @@ button {
 
     legend {
         margin-left: 20px;
-        width: 200px;
+        width: 230px;
     }
 
     button {

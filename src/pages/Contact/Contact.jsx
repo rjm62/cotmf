@@ -30,7 +30,7 @@ function Contact() {
     const templateParams = {
         from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'statut: '+statut,
         from_email: email,
-        to_name: 'Monsieur Phalempin',
+        to_name: 'Monsieur Falempin',
         message :message,
     }
 

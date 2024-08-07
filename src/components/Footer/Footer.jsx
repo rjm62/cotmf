@@ -14,10 +14,10 @@ function Footer() {
         <div className='footerContainer'>
             <nav className='navFooter'>
                 <div>
-                    <Link to="/MentionsLégales" className='footerLink'>Mentions légales</Link>
+                    <Link to="/MentionsLegales" className='footerLink'>Mentions légales</Link>
                 </div>
                 <div>
-                    <Link to="/Politique de confidentialité" className='footerLink'>Politique de confidentialité</Link>
+                    <Link to="/PolitiqueDeConfidentialite" className='footerLink'>Politique de confidentialité</Link>
                 </div>
                 <div className='footerLink' onClick={openContactPage}>Contact</div>
             </nav>

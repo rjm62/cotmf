@@ -1,0 +1,20 @@
+.mentionsLegalesContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    min-height: 633px;
+    padding: 40px 0;
+}
+
+.mentionsLegalesContainer h2 {
+    margin: auto;
+}
+
+.mentionsLegalesContainer .center {
+    margin: 20px auto;
+    color: blue;
+}

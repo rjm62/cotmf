@@ -80,12 +80,12 @@
 @media screen and (max-width:700px) {
     .transportContainer {
         flex-direction: column;
+        min-height: 963px;
     }
 
     .imageContainer {
         width: 100%;
         height: 100%;
-        min-height: 350px;
     }
 
     .commentContainer {

@@ -79,6 +79,7 @@
 @media screen and (max-width:700px) {
     .stockageContainer {
         flex-direction: column;
+        min-height: 963px;
     }
 
     .imageContainer {

@@ -35,7 +35,7 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'statut:' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
         from_email: email,
         to_name: 'Monsieur Falempin',
         message :message,

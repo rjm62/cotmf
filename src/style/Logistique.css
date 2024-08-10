@@ -54,10 +54,17 @@
         display: grid;
         grid-template-columns: 1fr;
         column-gap: 0;
+        min-height: 963px;
+        padding: 65px 0 10px 0;
     } 
 
     .logistiqueContainer figure {
-        margin-top: 25px;
+        margin-top: 10px;
+        height: 220px;
+    }
+
+    .logistiqueContainer figure img {
+        height: 100%;
     }
 
     .logistiqueContainer figure figcaption {

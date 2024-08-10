@@ -87,7 +87,7 @@ i {
 @media screen and (max-width:550px) {
     .footerContainer {
         height: 68px;
-        padding: 0 2px;
+        padding: 0 10px;
     }
 
     .navFooter {
@@ -101,7 +101,7 @@ i {
     }
 }
 
-@media screen and (max-width:400px) and (min-width:320px) {
+@media screen and (max-width:410px) {
     .navFooter {
         width: 200px; 
         padding-left: 5px;     
@@ -110,4 +110,11 @@ i {
     .copyright {
         font-size: 5px;
     }
+}
+
+@media screen and (max-width: 375px) and (min-width: 320px){
+    .navFooter {
+        width: 180px;
+        padding-left: 2px;    
+    } 
 }

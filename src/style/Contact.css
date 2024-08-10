@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 765px;
+    width: 800px;
     height:92%;
     border-radius: 10px;
     background-color: #ffffff;
@@ -217,7 +217,7 @@
 }
 
 .field input {
-    width: 270px;
+    width: 280px;
     height: 20px;
     box-shadow: 2px 2px 5px rgb(159, 144, 144) inset;
     background-color:#F8F5F5;
@@ -238,12 +238,25 @@ legend {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 50px;
     width: 250px;
+    /* background-color: aquamarine; */
 }
 
 .checkbox {
     cursor: pointer;
+    /* padding: 0; */
+    margin: 0 1px;
+}
+
+.tintin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 101px;
+    /* padding: 0; */
+    margin: 0px;
+    /* background-color: yellow; */
 }
 
 .checkboxField label {
@@ -256,7 +269,7 @@ legend {
 }
 
 textarea {
-    width: 275%;
+    width: 290%;
     min-height: 100px;
     height: auto;
     box-shadow: 2px 2px 7px rgb(159, 144, 144) inset;
@@ -286,9 +299,9 @@ button {
    
 @media screen and (max-width:820px) {
     .exitFormInfosContainer {
-        width:400px;
+        width: 400px;
     }
-
+    
     .formInfosContainer {
         flex-direction: column;
         justify-content: space-between;
@@ -307,7 +320,12 @@ button {
 
     .field input {
         width: 230px;
-       }
+    }
+
+    .checkboxField {
+        margin-left: 30px;
+        /* background-color: green; */
+    }
 
     .message {
         width: 60%;
@@ -327,11 +345,15 @@ button {
         width: 240px;
         margin-left: 20px;
     }
-
 } 
 
 @media screen and (max-width:600px) {
     .exitFormInfosContainer {
         width:300px;
+    }
+  
+    .checkboxField {
+        margin-left: 10px;
+        /* background-color: green; */
     }
 }

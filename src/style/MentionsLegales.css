@@ -60,6 +60,12 @@
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 820px) {
+    .mentionsLegalesContainer {
+        min-height: 963px;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .mentionsLegalesContainer .scroller p {
         font-size: 10px;

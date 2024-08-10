@@ -16,11 +16,18 @@ function Contact() {
     const [emailCheck, setEmailCheck] = useState(20)
     const [stockageAsked, setStockageAsked] = useState(false)
     const [transportAsked, setTransportAsked] = useState(false)
+    const [logistiqueAsked, setLogistiqueAsked] = useState(false)
+    const [stockageRequest, setStockageRequest] = useState("")
+    const [transportRequest, setTransportRequest] = useState("")
+    const [logistiqueRequest, setLogistiqueRequest] = useState("")
     const [lastNameError, setLastNameError] = useState("")
     const [emailError, setEmailError] = useState("")
     const [thanks, setThanks] = useState(true)
     const [spinner, setSpinner] = useState(true)
     const {contactButton, setContactButton} = useContext(DataContext)
+    console.log(stockageRequest)
+    console.log(transportRequest)
+    console.log(logistiqueRequest)
     
     const [sendMessage, setSendMessage] = useState("En cours de traitement...")
     const serviceId = 'service_5goaltg'
@@ -28,7 +35,7 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'statut: '+statut,
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'statut:' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
         from_email: email,
         to_name: 'Monsieur Falempin',
         message :message,
@@ -66,11 +73,18 @@ function Contact() {
     }
 
     const toggleStockageAsked = () => {
-        setStockageAsked(!stockageAsked)   
+        setStockageAsked(!stockageAsked) 
+        stockageAsked === false ? (setStockageRequest("stockage")) : (setStockageRequest(""))
     }
 
     const toggleTransportAsked = () => {
         setTransportAsked(!transportAsked)
+        transportAsked === false ? (setTransportRequest("transport")) : (setTransportRequest(""))
+    }
+
+    const toggleLogistiqueAsked = () => {
+        setLogistiqueAsked(!logistiqueAsked)
+        logistiqueAsked === false ? (setLogistiqueRequest("logistique")) : (setLogistiqueRequest(""))
     }
 
     const selectedStatut = (choice) => {
@@ -97,7 +111,7 @@ function Contact() {
                        },
                        (error) => {
                          console.log('FAILED...', error.text);
-                         setSendMessage("Désolé un problème dans l'envoi est survenu, veuillez réessayer ou appeler au 06-73-04-36-16.");
+                         setSendMessage("Désolé un problème dans l'envoi est survenu, veuillez réessayer ou envoyer un mail à: co.tmf.pro@gmail.com.");
                          setSpinner(false)
                        },
                      );
@@ -156,10 +170,18 @@ function Contact() {
                         <p className='error'>&nbsp;</p>
                         <legend>Votre demande concerne :</legend>
                         <div className='checkboxField'>
+                            <div className='tintin'>
                             <input type='checkbox' id='stockage'name='demande' className='checkbox' value= {stockageAsked}  onChange={toggleStockageAsked}/>
                             <label htmlFor='stockage'>Stockage</label>
+                            </div>
+                            <div className='tintin'>
                             <input type='checkbox' id='transport' name='demande' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
                             <label htmlFor='transport'>Transport</label>
+                            </div>
+                            <div className='tintin'>
+                            <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {logistiqueAsked} onChange={toggleLogistiqueAsked} />
+                            <label htmlFor='transport'>Logistique</label>
+                            </div>
                         </div>
                         <div className='field message'>
                             <label htmlFor='message'>Message</label>

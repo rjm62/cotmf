@@ -1,6 +1,136 @@
 .transportContainer {
     position: relative;
     display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 633px; 
+}
+
+.imageContainer {
+    display: flex;
+    position: relative;
+    width: 65%;
+    min-width: 320px;
+    height: 100%;
+    min-height:633px;
+}
+
+.imageContainer img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 35%;
+    height: 100%;
+    min-height: 633px;
+    line-height: 1rem;
+    color: #000000;
+}
+
+.withDecoration {
+    text-decoration: underline;
+    line-height: 4rem;
+}
+
+.commentContainer p {
+    font-size: 18px;
+    line-height: 1.5rem;
+    margin-top: 0; 
+    padding: 0 20px; 
+}
+
+@media screen and (max-width:1100px) {
+    .imageContainer {
+        width: 60%;
+    }
+
+    .commentContainer {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .commentContainer p {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .imageContainer {
+        width: 55%;
+    }
+
+    .commentContainer {
+        width: 45%;
+    }
+
+    .commentContainer p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .transportContainer {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;
+    }
+
+    .commentContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+    }
+
+    .commentContainer p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .imageContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+    }
+
+    .commentContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+    }
+
+    .commentContainer p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .commentContainer p {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+/* .transportContainer {
+    position: relative;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -92,4 +222,4 @@
         font-weight: 500px;
         padding: 0 5px;
 }
-}
+} */

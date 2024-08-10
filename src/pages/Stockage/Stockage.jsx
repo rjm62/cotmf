@@ -15,8 +15,10 @@ function Stockage() {
 
     return (
         <div className="stockageContainer"> 
-             <img src={photoPageStockage} alt= "hangar avec des palettes" />
-             <figcaption>
+            <div className='imageContainer'>
+                <img src={photoPageStockage} alt= "hangar avec des palettes" />
+            </div>
+            <div className='commentContainer'>
                 <p className='withDecoration'>Notre entrepôt idéalement situé à Desvres :</p>
                 <p>25 minutes de l'A16 et de l'A26</p>
                 <p>2H30 de Paris et de Bruxelles</p>
@@ -27,8 +29,8 @@ function Stockage() {
                 <p>- Externe de 2000 m2</p>
                 <p></p>
                 <p></p>
-                <p>Zone sécurisée surveillée 24h/24</p>
-            </figcaption>
+                <p>Zone sécurisée surveillée 24h/24 &nbsp; 7jours/7</p>
+            </div>
             {display=="ON" ? <Contact />: ("")}
         </div>
     )

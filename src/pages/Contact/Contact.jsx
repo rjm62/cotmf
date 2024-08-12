@@ -9,7 +9,7 @@ function Contact() {
     const [lastName, setLastName] = useState("")
     const [firstName, setFirstName] = useState("")
     const [email, setEmail] = useState("")
-    const [statut, setStatut] = useState("false")
+    const [statut, setStatut] = useState("non indiqué")
     const [checkbox, setCheckbox] = useState("")
     const [message, setMessage] = useState("")
     const [lastNameCheck, setLastNameCheck] = useState(10)
@@ -35,7 +35,7 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un: ' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
         from_email: email,
         to_name: 'Monsieur Falempin',
         message :message,

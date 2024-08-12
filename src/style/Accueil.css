@@ -50,12 +50,14 @@
         grid-template-columns: 1fr; 
         height: 100%;
         width: 100%;
+        padding-bottom: 12px;
         column-gap:0;
     }  
 
     .accueilContainer figure {
         width: 80%;
         height:300px;
+        margin: 8px;
     }
 
     .filter {

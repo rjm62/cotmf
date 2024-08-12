@@ -16,5 +16,4 @@ const currentScreenWidth = () => {
         return screenWidth;
     };
 
-
 export default currentScreenWidth;

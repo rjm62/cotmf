@@ -20,7 +20,6 @@ function Dropdown({selectedStatut}) {
         selectedStatut(event.target.value)
         setOpenCollapse(true)
         console.log(event.target.value)
-
     }
 
     return (

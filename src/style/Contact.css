@@ -123,8 +123,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 50%;
-   
+    width: 50%;   
 }
 
 .infos {
@@ -240,23 +239,19 @@ legend {
     align-items: center;
     margin-left: 50px;
     width: 250px;
-    /* background-color: aquamarine; */
 }
 
 .checkbox {
     cursor: pointer;
-    /* padding: 0; */
     margin: 0 1px;
 }
 
-.tintin {
+.checkboxUnitary {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 101px;
-    /* padding: 0; */
     margin: 0px;
-    /* background-color: yellow; */
 }
 
 .checkboxField label {
@@ -324,7 +319,6 @@ button {
 
     .checkboxField {
         margin-left: 30px;
-        /* background-color: green; */
     }
 
     .message {
@@ -354,6 +348,5 @@ button {
   
     .checkboxField {
         margin-left: 10px;
-        /* background-color: green; */
     }
 }

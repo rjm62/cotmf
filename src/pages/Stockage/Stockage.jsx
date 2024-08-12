@@ -12,7 +12,6 @@ function Stockage() {
         contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
     }, [contactButton]) 
 
-
     return (
         <div className="stockageContainer"> 
             <div className='imageContainer'>

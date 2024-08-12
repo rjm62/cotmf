@@ -6,7 +6,7 @@
     min-height: 633px; 
 }
 
-.imageContainer {
+.transportContainer .imageContainer {
     display: flex;
     position: relative;
     width: 65%;
@@ -15,14 +15,14 @@
     min-height:633px;
 }
 
-.imageContainer img{
+.transportContainer .imageContainer img{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.commentContainer {
+.transportContainer .commentContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +34,12 @@
     color: #000000;
 }
 
-.withDecoration {
+.transportContainer .withDecoration {
     text-decoration: underline;
     line-height: 4rem;
 }
 
-.commentContainer p {
+.transportContainer .commentContainer p {
     font-size: 18px;
     line-height: 1.5rem;
     margin-top: 0; 
@@ -47,179 +47,78 @@
 }
 
 @media screen and (max-width:1100px) {
-    .imageContainer {
+    .transportContainer .imageContainer {
         width: 60%;
     }
 
-    .commentContainer {
+    .transportContainer .commentContainer {
         width: 40%;
     }
 }
 
 @media screen and (max-width:960px) {
-    .commentContainer p {
+    .transportContainer .commentContainer p {
         font-size: 16px;
     }
-
 }
 
 @media screen and (max-width:850px) {
-    .imageContainer {
+    .transportContainer .imageContainer {
         width: 55%;
     }
 
-    .commentContainer {
+    .transportContainer .commentContainer {
         width: 45%;
     }
 
-    .commentContainer p {
+    .transportContainer .commentContainer p {
         font-size: 15px;
-    }
-}
-
-@media screen and (max-width:700px) {
-    .transportContainer {
-        flex-direction: column;
-        min-height: 963px;
-    }
-
-    .imageContainer {
-        width: 100%;
-        height: 100%;
-    }
-
-    .commentContainer {
-        width: 100%;
-        height: 100%;
-        min-height: 500px;
-    }
-
-    .commentContainer p {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .imageContainer {
-        width: 100%;
-        height: 100%;
-        min-height: 250px;
-    }
-
-    .commentContainer {
-        width: 100%;
-        height: 100%;
-        min-height: 400px;
-    }
-
-    .commentContainer p {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width:360px) {
-    .commentContainer p {
-        font-size: 15px;
-    }
-}
-
-
-
-
-
-
-/* .transportContainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    min-height: 633px;
-}
-
-.transportContainer img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height:633px;
-    object-fit: cover;
-}
-
-.transportContainer figcaption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height: 633px;
-    margin-top: 5px;
-    font-size: 18px;
-    color: #000000;
-    background-image: linear-gradient(to bottom, RGBa(255,255,255,0) 0%, RGBa(255,255,255,0) 50%, RGBa(255,255,255,0.7) 70%, Rgba(255,255,255,0.4) 95%, Rgba(255,255,255,0) 100%);
-}
-
-.transportContainer figcaption p {
-    width: 400px;
-    margin-top: 1px;
-    margin-right: 100px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    line-height: 2rem;
-    text-align: left;
-}
-
-@media screen and (max-width:1200px) {
-    .transportContainer figcaption p {
-        width: 400px;
-        margin-right: 40px;
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .transportContainer figcaption p {
-        width: 380px;
-        margin-right: 5px;
-    }
-}
-
-@media screen and (max-width:920px) {
-    .transportContainer figcaption {
-        background-image: linear-gradient(to bottom, RGBa(255,255,255,0.8) 0%, Rgba(255,255,255,0.8) 100%);
     }
 }
 
 @media screen and (max-width:820px) {
     .transportContainer {
+        flex-direction: column;
         min-height: 963px;
     }
 
-    .transportContainer figcaption p {
-        margin: 15px auto;
-        font-size: 15px;
-        }
-}
-
-@media screen and (max-width:450px) {
-    .transportContainer img {
-        max-width: 665px;
-        min-width: 310px;
+    .transportContainer .imageContainer {
         width: 100%;
+        height: 100%;
+        min-height: 460px;
     }
 
-    .transportContainer figcaption{
-        background-image: linear-gradient(to bottom, RGBa(255,255,255,0.8) 0%, Rgba(255,255,255,0.8) 100%);
+    .transportContainer .commentContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
     }
 
-    .transportContainer figcaption p {
-        width: 300px;
-        margin: 8px auto;
-        font-size: 15px;
-        font-weight: 500px;
-        padding: 0 5px;
+    .transportContainer .commentContainer p {
+        font-size: 18px;
+    }
 }
-} */
+
+@media screen and (max-width:500px) {
+    .transportContainer .imageContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+    }
+
+    .transportContainer .commentContainer {
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+    }
+
+    .transportContainer .commentContainer p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .transportContainer .commentContainer p {
+        font-size: 15px;
+    }
+}

@@ -170,15 +170,15 @@ function Contact() {
                         <p className='error'>&nbsp;</p>
                         <legend>Votre demande concerne :</legend>
                         <div className='checkboxField'>
-                            <div className='tintin'>
+                            <div className='checkboxUnitary'>
                             <input type='checkbox' id='stockage'name='demande' className='checkbox' value= {stockageAsked}  onChange={toggleStockageAsked}/>
                             <label htmlFor='stockage'>Stockage</label>
                             </div>
-                            <div className='tintin'>
+                            <div className='checkboxUnitary'>
                             <input type='checkbox' id='transport' name='demande' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
                             <label htmlFor='transport'>Transport</label>
                             </div>
-                            <div className='tintin'>
+                            <div className='checkboxUnitary'>
                             <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {logistiqueAsked} onChange={toggleLogistiqueAsked} />
                             <label htmlFor='transport'>Logistique</label>
                             </div>
@@ -220,6 +220,5 @@ function Contact() {
         </div>
     )
 }
-
 
 export default Contact

@@ -18,8 +18,17 @@ function Transport() {
                 <img src={camion} alt= "camion sur une route" />
             </div>
             <div className='commentContainer'>        
-                <p>Transport partiel ou complet.</p>
+                <h2>Transport :</h2>
                 <p></p>
+                <p>Co.TMF, vous propose un service de transport routier de + 3,5T.</p>
+                <p></p>
+                <p>Nous sommes en capacité de répondre à votre demande, que ce soit en
+                    lot complet ou partiel dans toute la France, le Bénélux, l'Allemagne 
+                    et la Grande Bretagne .
+                </p>
+                <p></p>
+                <p>Nous saurons répondre à votre demande .</p>
+                {/* <p></p>
                 <p></p>
                 <p>Nous effectuons vos livraisons dans :</p>
                 <p>- Les hauts de France</p>
@@ -27,7 +36,7 @@ function Transport() {
                 <p>- La Belgique</p>
                 <p></p>
                 <p></p>
-                <p>Nous réalisons également votre affrètement sur toute la France et les pays limitrophes.</p>
+                <p>Nous réalisons également votre affrètement sur toute la France et les pays limitrophes.</p> */}
             </div>
             {display=="ON" ? <Contact />: ("")}
         </div>

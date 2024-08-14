@@ -20,7 +20,7 @@ function PolitiqueDeConfidentialite() {
                 <h4>ARTICLE 1 : COLLECTE DE VOS INFORMATIONS</h4>
                 <p>Nous recueillons des informations uniquement lorsque vous remplissez 
                 notre formulaire de contact.</p>
-                <p>Nous récoltons les informations suivantes: Nom, Prénom, statut, et adresse mail.</p>
+                <p>Nous récoltons les informations suivantes: Nom, Prénom, statut, adresse mail, et message.</p>
                 <p></p>
                 <h4>ARTICLE 2 : UTILISATION DE VOS INFORMATIONS</h4>
                 <p>Toutes les informations que nous récupérons via le formulaire de contact servent

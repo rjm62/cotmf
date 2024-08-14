@@ -21,26 +21,28 @@ function MentionsLegales() {
                 <p>Conformément aux dispositions de la loi n°2004-575 du 21 juin 2004 pour la
                     confiance en l'économie numérique, il est porté à la connaissance des
                     utilisateurs et visiteurs du site Co.TMF, les présentes mentions légales.</p>
-                <p>La connexion et la navigation sur le Site par l'utilisateur implique
+                <p>La connexion et la navigation sur le Site par l'utilisateur impliquent
                 l'acceptation intégrale et sans réserve des présentes mentions légales.
                 </p>
                 <p></p>
                 <p></p>
                 <h3>PROPRIETAIRE DU SITE</h3>
-                <p>Identité de l'entreprise</p>
-                <p>Nom et prénom accompagnés de EI</p>
-                <p>Numéro d'immatriculation</p>
-                <p>Mail et numéro de téléphone</p>
-                <p>Numéro d'identification à la TVA</p>
+                <p>Co.TMF</p>
+                <p>FALEMPIN Maxime EI</p>
+                <p>72B, route du Petit Parenty - 62650 PARENTY</p>
+                <p>SIRET 917 755 597 00015</p>
+                <p>co.tmf.pro@gmail.com</p>
+                <p>06-73-04-36-16</p>
+                <p>TVA FR 82 917 755 597</p>
                 <p></p>
                 <p></p>
                 <h3>CONCEPTEUR DU SITE</h3>
-                <p>RJM62</p>
+                <p>JMR WEBCRAFT</p>
                 <p></p>
                 <p></p>
                 <h3>HEBERGEUR</h3>
-                <p>L'hébergeur du site est la société ....................</p>
-                <p>Le siège social est situé au .............</p>
+                <p>L'hébergeur du site est la société : o2switch</p>
+                <p>Siège social situé à Clermont Ferrand</p>
                 <p></p>
                 <p></p>
                 <h3>ACCES AU SITE</h3>

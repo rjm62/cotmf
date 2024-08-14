@@ -18,17 +18,16 @@ function Stockage() {
                 <img src={photoPageStockage} alt= "hangar avec des palettes" />
             </div>
             <div className='commentContainer'>
-                <p className='withDecoration'>Notre entrepôt idéalement situé à Desvres :</p>
-                <p>25 minutes de l'A16 et de l'A26</p>
-                <p>2H30 de Paris et de Bruxelles</p>
+                <h2 className='withDecoration'>Stockage marchandises :</h2>
+                <p>Nous disposons d'un entrepôt de 1500m2 et 3000m2 extérieurs dédié au 
+                    stockage et à l'entreposage de marchandises dans le Pas de Calais, région
+                    Haut de France .
+                </p>
+                <p>&Agrave; proximité des autoroutes A16 et A26, 20min .</p>
                 <p></p>
-                <p></p>
-                <p className='withDecoration'>Une capacité de stockage :</p>
-                <p>- Interne de 500 palettes 80 X 120</p>
-                <p>- Externe de 2000 m2</p>
-                <p></p>
-                <p></p>
-                <p>Zone sécurisée surveillée 24h/24 &nbsp; 7jours/7</p>
+                <p>Entièrement sécurisé, notre dépôt est un lieu de stockage et entreposage
+                     sûr pour marchandises de toutes sortes .  
+                </p>
             </div>
             {display=="ON" ? <Contact />: ("")}
         </div>

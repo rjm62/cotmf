@@ -30,11 +30,9 @@ function Dropdown({selectedStatut}) {
                     <p>{selectionDisplay}</p>
                 <i className="fa-solid fa-chevron-up" onClick={closeCollapseContent}></i>
                 </div>
-                <div className='collapseContent'>
-                    <ul onClick={choice}> { statut.map((detail) => {
-                        return <option className='position' key={detail}>{detail}</option>
-                    })}
-                    </ul>
+                <div className='collapseContent' onClick={choice}> { statut.map((detail) => {
+                        return <option className='position' key={detail} >{detail}</option>
+                    })}     
                 </div>
             </div> : 
              <div className='collapseContainer'>

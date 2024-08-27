@@ -12,6 +12,7 @@ import {DataContextProvider} from './utils/Context/DataContext'
 
 function App() {
     return (
+        <div className="toto">
         <Router>
             <DataContextProvider>
                 <Header />
@@ -26,7 +27,8 @@ function App() {
                     </Routes>
                 <Footer />
             </DataContextProvider>
-        </Router> 
+        </Router>
+        </div> 
     )
 }
 

@@ -1,9 +1,8 @@
-#root {
+/* #root {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
 }
 
 @media screen and (max-width:824px) and (min-width:320px) {
@@ -11,7 +10,7 @@
     height: 100%;
   }
 
-}
+} */
 
 body {
     margin: 0;

@@ -17,17 +17,16 @@ function Contact() {
     const [stockageAsked, setStockageAsked] = useState(false)
     const [transportAsked, setTransportAsked] = useState(false)
     const [logistiqueAsked, setLogistiqueAsked] = useState(false)
+    const [ventesAsked, setVentesAsked] = useState(false)
     const [stockageRequest, setStockageRequest] = useState("")
     const [transportRequest, setTransportRequest] = useState("")
     const [logistiqueRequest, setLogistiqueRequest] = useState("")
+    const [ventesRequest, setVentesRequest] = useState("")
     const [lastNameError, setLastNameError] = useState("")
     const [emailError, setEmailError] = useState("")
     const [thanks, setThanks] = useState(true)
     const [spinner, setSpinner] = useState(true)
     const {contactButton, setContactButton} = useContext(DataContext)
-    console.log(stockageRequest)
-    console.log(transportRequest)
-    console.log(logistiqueRequest)
     
     const [sendMessage, setSendMessage] = useState("En cours de traitement...")
     const serviceId = 'service_5goaltg'
@@ -35,7 +34,7 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un: ' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest, 
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un: ' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest + ' ' + ' '+ventesRequest,
         from_email: email,
         to_name: 'Monsieur Falempin',
         message :message,
@@ -85,6 +84,11 @@ function Contact() {
     const toggleLogistiqueAsked = () => {
         setLogistiqueAsked(!logistiqueAsked)
         logistiqueAsked === false ? (setLogistiqueRequest("logistique")) : (setLogistiqueRequest(""))
+    }
+
+    const toggleVentesAsked = () => {
+        setVentesAsked(!ventesAsked)
+        ventesAsked === false ? (setVentesRequest("logistique")) : (setVentesRequest(""))
     }
 
     const selectedStatut = (choice) => {
@@ -178,9 +182,15 @@ function Contact() {
                             <input type='checkbox' id='transport' name='demande' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
                             <label htmlFor='transport'>Transport</label>
                             </div>
+                        </div>
+                        <div className='checkboxField'>
                             <div className='checkboxUnitary'>
                             <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {logistiqueAsked} onChange={toggleLogistiqueAsked} />
                             <label htmlFor='transport'>Logistique</label>
+                            </div>
+                            <div className='checkboxUnitary'>
+                            <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {ventesAsked} onChange={toggleVentesAsked} />
+                            <label htmlFor='transport'>Ventes</label>
                             </div>
                         </div>
                         <div className='field message'>

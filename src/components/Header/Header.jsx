@@ -46,12 +46,13 @@ function Header() {
     return (
         <div className="headerContainer">
             <h1 className='notranslate'> Co.TMF</h1>
-            {mobile >=700 ? (
+            {mobile >=750 ? (
             <nav className='navHeader'>              
                     <Link to="/"className='headerLink'>ACCUEIL</Link>               
                     <Link to="/Stockage" className='headerLink'>STOCKAGE</Link>  
                     <Link to="/Transport" className='headerLink'>TRANSPORT</Link> 
-                    <Link to="/Logistique" className='headerLink'>LOGISTIQUE</Link>         
+                    <Link to="/Logistique" className='headerLink'>LOGISTIQUE</Link> 
+                    <Link to="/Ventes" className='headerLink'>VENTES</Link>        
                 <div className="contactModal">
                     <p className='headerLink modal' onClick={(e) => openContactPage(e)}>CONTACT</p>
                 </div>
@@ -66,6 +67,7 @@ function Header() {
                         <Link to="/Stockage" className='headerMobileLink'>STOCKAGE</Link>                     
                         <Link to="/Transport" className='headerMobileLink'>TRANSPORT</Link>              
                         <Link to="/Logistique" className='headerMobileLink' >LOGISTIQUE</Link>  
+                        <Link to="/Ventes" className='headerMobileLink'>VENTES</Link>
                         <div className="contactModal">
                             <div className='headerMobileLink modal' onClick={(e) => openContactPage(e)}>CONTACT</div>
                         </div>

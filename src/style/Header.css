@@ -28,7 +28,8 @@ h1 {
     justify-content: space-around;
     align-items: center;
     margin-top: 28px;
-    width: 660px;
+    margin-right: 10px;
+    width: 670px;
 }
 
 .headerLink {
@@ -132,7 +133,7 @@ nav :hover{
 
 @media screen and (max-width:1024px) {
     .navHeader {
-        width:500px;
+        width:600px;
         font-size: 14px;
     }
 
@@ -141,9 +142,15 @@ nav :hover{
     }
 }
 
+@media screen and (max-width:800px)  {
+    .navHeader {
+        width:550px;
+    }
+}
+
 @media screen and (max-width:700px)  {
     .navHeader {
-        width:380px;
+        width:400px;
         font-size: 12px;
     }
 

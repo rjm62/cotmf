@@ -53,7 +53,7 @@
         display: grid;
         grid-template-columns: 1fr;
         column-gap: 0;
-       height: 120%;
+        min-height: 963px;
         padding: 55px 0 10px 0;
     } 
 

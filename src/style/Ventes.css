@@ -50,7 +50,7 @@
         display: grid;
         grid-template-columns: 1fr;
         column-gap: 0;
-        height: 120%;
+        min-height: 963px;
         padding: 0px 0 30px 0;
     } 
 

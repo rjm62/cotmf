@@ -13,7 +13,7 @@ import {DataContextProvider} from './utils/Context/DataContext'
 
 function App() {
     return (
-        <div className="toto">
+        <div className="globalContainer">
         <Router>
             <DataContextProvider>
                 <Header />

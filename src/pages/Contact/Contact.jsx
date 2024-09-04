@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import {useContext} from 'react';
 import {DataContext} from '../../utils/Context/DataContext';
-import Dropdown from '../../components/Dropdown/Dropdown';
 import emailjs from '@emailjs/browser';
 import '../../style/Contact.css';
 
@@ -14,6 +13,8 @@ function Contact() {
     const [message, setMessage] = useState("")
     const [lastNameCheck, setLastNameCheck] = useState(10)
     const [emailCheck, setEmailCheck] = useState(20)
+    const [particulierChoosen, setParticulierChoosen] = useState("")
+    const [professionnelChoosen, setProfessionnelChoosen] = useState("")
     const [stockageAsked, setStockageAsked] = useState(false)
     const [transportAsked, setTransportAsked] = useState(false)
     const [logistiqueAsked, setLogistiqueAsked] = useState(false)
@@ -27,6 +28,8 @@ function Contact() {
     const [thanks, setThanks] = useState(true)
     const [spinner, setSpinner] = useState(true)
     const {contactButton, setContactButton} = useContext(DataContext)
+    console.log(particulierChoosen)
+    console.log(professionnelChoosen)
     
     const [sendMessage, setSendMessage] = useState("En cours de traitement...")
     const serviceId = 'service_5goaltg'
@@ -34,7 +37,7 @@ function Contact() {
     const publicKey = 'Ur_I_y3LsHvbROGoK'
 
     const templateParams = {
-        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ 'il est un: ' + ' ' +statut + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest + ' ' + ' '+ventesRequest,
+        from_name: lastName + ' '+ ' ' +firstName +' '+' '+ ' cette personne est un ' + ' ' +particulierChoosen + professionnelChoosen + ' ' + ', et sa demande concerne: '+' ' +stockageRequest +' ' + ' ' + ' '+transportRequest + ' ' + ' '+logistiqueRequest + ' ' + ' '+ventesRequest,
         from_email: email,
         to_name: 'Monsieur Falempin',
         message :message,
@@ -71,6 +74,18 @@ function Contact() {
         }
     }
 
+    const toggleParticulierChoosen = () => {
+        setParticulierChoosen(!particulierChoosen)
+        setProfessionnelChoosen("")
+        particulierChoosen === false ? (setParticulierChoosen("")) :(setParticulierChoosen("particulier"))
+    }
+
+    const toggleProfessionnelChoosen = () => {
+        setProfessionnelChoosen(!professionnelChoosen)
+        setParticulierChoosen("")
+        professionnelChoosen === false ? (setProfessionnelChoosen("")) : (setProfessionnelChoosen("professionnel"))
+    }
+
     const toggleStockageAsked = () => {
         setStockageAsked(!stockageAsked) 
         stockageAsked === false ? (setStockageRequest("stockage")) : (setStockageRequest(""))
@@ -88,7 +103,7 @@ function Contact() {
 
     const toggleVentesAsked = () => {
         setVentesAsked(!ventesAsked)
-        ventesAsked === false ? (setVentesRequest("logistique")) : (setVentesRequest(""))
+        ventesAsked === false ? (setVentesRequest("ventes")) : (setVentesRequest(""))
     }
 
     const selectedStatut = (choice) => {
@@ -167,9 +182,21 @@ function Contact() {
                             <input type='email' id='mail' name='mail' onChange={emailChangeAndCheck} />
                         </div>
                         <p className='error'>&nbsp;{emailError}</p>
-                        <div className='field'>
-                            <label htmlFor='statut'>Statut</label>
-                            <Dropdown selectedStatut={selectedStatut} />
+
+
+                        <legend htmlFor='statut'>Statut</legend>
+                        <div className='checkboxField'>
+                            <div className='checkboxUnitary'>
+                            <input type='radio' id='particulier' name='statut' className='checkbox' value= {particulierChoosen} onChange={toggleParticulierChoosen} />
+                            <label htmlFor='particulier'>Particulier</label>
+                            </div>
+                            <div className='checkboxUnitary'>
+                            <input type='radio' id='professionnel' name='statut' className='checkbox' value= {professionnelChoosen} onChange={toggleProfessionnelChoosen} />
+                            <label htmlFor='professionnel'>Professionnel</label>
+                            </div>
+                
+
+
                         </div>
                         <p className='error'>&nbsp;</p>
                         <legend>Votre demande concerne :</legend>

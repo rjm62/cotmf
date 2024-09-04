@@ -108,6 +108,7 @@
 .exitContainer i {
     font-size: 30px;
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .formInfosContainer {

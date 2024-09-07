@@ -47,7 +47,7 @@ function Header() {
 
     return (
         <header>
-            <h1 className='notranslate'> Co.TMF</h1>
+            <h1> Co.TMF</h1>
             {mobile >=750 ? (
             <nav className='navHeader'>              
                     <Link to="/"className='headerLink'>ACCUEIL</Link>               

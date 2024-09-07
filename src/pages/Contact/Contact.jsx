@@ -176,7 +176,7 @@ function Contact() {
                         <p className='error' > &nbsp;{lastNameError}</p>
                         <div className='field'>
                             <label htmlFor='firstName'>Prénom</label>
-                            <input type='text' id='lastName' name='lastName' onChange={(e) => setFirstName(e.target.value)} />
+                            <input type='text' id='firstName' name='firstName' onChange={(e) => setFirstName(e.target.value)} />
                         </div>
                         <p className='error' > &nbsp;</p>
                         <div className='field'>
@@ -189,11 +189,11 @@ function Contact() {
                         <legend htmlFor='statut'>Statut</legend>
                         <div className='checkboxField'>
                             <div className='checkboxUnitary'>
-                            <input type='radio' id='particulier' name='statut' className='checkbox' value= {particulierChoosen} onChange={toggleParticulierChoosen} />
+                            <input type='radio' id='particulier' name='particulier' className='checkbox' value= {particulierChoosen} onChange={toggleParticulierChoosen} />
                             <label htmlFor='particulier'>Particulier</label>
                             </div>
                             <div className='checkboxUnitary'>
-                            <input type='radio' id='professionnel' name='statut' className='checkbox' value= {professionnelChoosen} onChange={toggleProfessionnelChoosen} />
+                            <input type='radio' id='professionnel' name='professionnel' className='checkbox' value= {professionnelChoosen} onChange={toggleProfessionnelChoosen} />
                             <label htmlFor='professionnel'>Professionnel</label>
                             </div>
                 
@@ -204,22 +204,22 @@ function Contact() {
                         <legend>Votre demande concerne :</legend>
                         <div className='checkboxField'>
                             <div className='checkboxUnitary'>
-                            <input type='checkbox' id='stockage'name='demande' className='checkbox' value= {stockageAsked}  onChange={toggleStockageAsked}/>
+                            <input type='checkbox' id='stockage'name='stockage' className='checkbox' value= {stockageAsked}  onChange={toggleStockageAsked}/>
                             <label htmlFor='stockage'>Stockage</label>
                             </div>
                             <div className='checkboxUnitary'>
-                            <input type='checkbox' id='transport' name='demande' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
+                            <input type='checkbox' id='transport' name='transport' className='checkbox' value= {transportAsked} onChange={toggleTransportAsked} />
                             <label htmlFor='transport'>Transport</label>
                             </div>
                         </div>
                         <div className='checkboxField'>
                             <div className='checkboxUnitary'>
-                            <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {logistiqueAsked} onChange={toggleLogistiqueAsked} />
-                            <label htmlFor='transport'>Logistique</label>
+                            <input type='checkbox' id='logistique' name='logistique' className='checkbox' value= {logistiqueAsked} onChange={toggleLogistiqueAsked} />
+                            <label htmlFor='logistique'>Logistique</label>
                             </div>
                             <div className='checkboxUnitary'>
-                            <input type='checkbox' id='logistique' name='demande' className='checkbox' value= {ventesAsked} onChange={toggleVentesAsked} />
-                            <label htmlFor='transport'>Ventes</label>
+                            <input type='checkbox' id='ventes' name='ventes' className='checkbox' value= {ventesAsked} onChange={toggleVentesAsked} />
+                            <label htmlFor='ventes'>Ventes</label>
                             </div>
                         </div>
                         <div className='field message'>

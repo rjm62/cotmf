@@ -3,6 +3,7 @@ import {useContext} from 'react';
 import {DataContext} from '../../utils/Context/DataContext';
 import emailjs from '@emailjs/browser';
 import '../../style/Contact.css';
+import { useOutletContext } from 'react-router-dom';
 
 function Contact() { 
     const [lastName, setLastName] = useState("")
@@ -28,8 +29,8 @@ function Contact() {
     const [thanks, setThanks] = useState(true)
     const [spinner, setSpinner] = useState(true)
     const {contactButton, setContactButton} = useContext(DataContext)
-    console.log(particulierChoosen)
-    console.log(professionnelChoosen)
+    const {isContactOpen, setIsContactOpen} = useContext(DataContext)
+    console.log(contactButton)
     
     const [sendMessage, setSendMessage] = useState("En cours de traitement...")
     const serviceId = 'service_5goaltg'
@@ -45,7 +46,8 @@ function Contact() {
 
     const contactPageClose = (event) => {
         event.preventDefault()
-        setContactButton(false)
+        setContactButton(!contactButton)
+        setIsContactOpen(false)
     }
 
     const lastNameChangeAndCheck = (event) => {

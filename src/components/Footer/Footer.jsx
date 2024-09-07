@@ -11,7 +11,7 @@ function Footer() {
         setContactButton(!contactButton)
     }
     return (
-        <div className='footerContainer'>
+        <footer>
             <nav className='navFooter'>
                 <div>
                     <Link to="/MentionsLegales" className='footerLink'>Mentions légales</Link>
@@ -24,7 +24,7 @@ function Footer() {
             <div>
                 <p className='footerLink copyright'><i className="fa-regular fa-copyright"></i>&nbsp; 2024  Co.TMF <i>&nbsp;&nbsp;&nbsp;&nbsp;</i>  tous droits réservés</p>
             </div>
-        </div>
+        </footer>
     )
 }
 

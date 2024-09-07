@@ -13,7 +13,7 @@ import {DataContextProvider} from './utils/Context/DataContext'
 
 function App() {
     return (
-        <div className="globalContainer">
+        <main className="globalContainer">
         <Router>
             <DataContextProvider>
                 <Header />
@@ -31,7 +31,7 @@ function App() {
                 <Footer />
             </DataContextProvider>
         </Router>
-        </div> 
+        </main> 
     )
 }
 

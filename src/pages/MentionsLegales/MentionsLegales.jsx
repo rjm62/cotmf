@@ -6,14 +6,17 @@ import  '../../style/MentionsLegales.css'
 
 function MentionsLegales() {
     const {contactButton, setContactButton} = useContext(DataContext)
+    const {isContactOpen, setIsContactOpen} = useContext(DataContext)
+    const [isContactAllowed, setIsContactAllowed] = useState(false)
     const [display, setDisplay] = useState("OFF")
- 
+
     useEffect(() => {
-        contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
+        isContactOpen && isContactAllowed === true ? setDisplay("ON") : setDisplay("OFF")
+        setIsContactAllowed(true)
     }, [contactButton]) 
 
     return (
-        <div className="mentionsLegalesContainer">
+        <section className="mentionsLegalesContainer">
             <div className='scroller'>
                 <h2>MENTIONS LEGALES</h2>
                 <p className='center'>En vigueur au 08 août 2024</p>
@@ -60,7 +63,7 @@ function MentionsLegales() {
                     </p>
                 </div>
                 {display=="ON" ? <Contact />: ("")}
-        </div>
+        </section>
     )
 }
 

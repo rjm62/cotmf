@@ -7,6 +7,7 @@ import '../../style/Header.css'
 
 function Header() {
     const {contactButton, setContactButton} = useContext(DataContext)
+    const {isContactOpen, setIsContactOpen} = useContext(DataContext)
     const mobile = currentScreenWidth()
     const [mobileNav, setMobileNav] = useState(false)
     const [iconType, setIconType] = useState("fa fa-bars")
@@ -15,6 +16,7 @@ function Header() {
     const openContactPage =(event) => {
         event.preventDefault()
         setContactButton(!contactButton)
+        setIsContactOpen(true)
     }
 
     const changingStyle = () => {
@@ -44,7 +46,7 @@ function Header() {
     }
 
     return (
-        <div className="headerContainer">
+        <header>
             <h1 className='notranslate'> Co.TMF</h1>
             {mobile >=750 ? (
             <nav className='navHeader'>              
@@ -73,7 +75,7 @@ function Header() {
                         </div>
                 </nav>) : ('')}
             </div>)}
-        </div>
+        </header>
     )
 }
 

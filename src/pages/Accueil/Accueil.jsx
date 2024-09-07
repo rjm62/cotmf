@@ -1,18 +1,21 @@
 import {useContext, useEffect, useState} from 'react'
 import {DataContext} from '../../utils/Context/DataContext'
-import storagePicture from '../../assets/img/storagePicture.jpg'
-import transportPicture from '../../assets/img/transportPicture.jpg'
-import logisticsPicture from '../../assets/img/logisticsPicture.png'
+import storagePicture from '../../assets/img/storagePicture.webp'
+import transportPicture from '../../assets/img/transportPicture.webp'
+import logisticsPicture from '../../assets/img/logisticsPicture.webp'
 import Contact from '../Contact/Contact'
 import '../../style/Accueil.css'
 
 function Accueil() {
     const {contactButton, setContactButton} = useContext(DataContext)
+    const {isContactOpen, setIsContactOpen} = useContext(DataContext)
+    const [isContactAllowed, setIsContactAllowed] = useState(false)
     const [display, setDisplay] = useState("OFF")
- 
-useEffect(() => {
-    contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
-}, [contactButton]) 
+
+    useEffect(() => {
+        isContactOpen && isContactAllowed === true ? setDisplay("ON") : setDisplay("OFF")
+        setIsContactAllowed(true)
+    }, [contactButton]) 
 
     return (
         <>

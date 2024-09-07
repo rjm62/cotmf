@@ -5,14 +5,17 @@ import  '../../style/PolitiqueDeConfidentialite.css'
 
 function PolitiqueDeConfidentialite() {
     const {contactButton, setContactButton} = useContext(DataContext)
+    const {isContactOpen, setIsContactOpen} = useContext(DataContext)
+    const [isContactAllowed, setIsContactAllowed] = useState(false)
     const [display, setDisplay] = useState("OFF")
- 
+
     useEffect(() => {
-        contactButton ===true ? setDisplay("ON") : setDisplay("OFF")
+        isContactOpen && isContactAllowed === true ? setDisplay("ON") : setDisplay("OFF")
+        setIsContactAllowed(true)
     }, [contactButton]) 
 
     return (
-        <div className='politiqueDeConfidentialiteContainer'>
+        <section className='politiqueDeConfidentialiteContainer'>
             <div className='scroller'>
                 <h2>POLITIQUE DE CONFIDENTIALITE</h2>
                 <p className='center'>Date de dernière mise à jour: 08 août 2024</p>
@@ -67,7 +70,7 @@ function PolitiqueDeConfidentialite() {
                         et que celle-ci puisse être modifiée en tout temps par l'éditeur.</p>
             </div>
             {display=="ON" ? <Contact />: ("")}
-        </div>
+        </section>
     )
 }
 

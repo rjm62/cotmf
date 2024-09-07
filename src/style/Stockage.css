@@ -81,14 +81,14 @@
 
     .stockageContainer .imageContainer {
         width: 100%;
-        height: 40%;
-        min-height: 370px;
+        height: 100%;
+        min-height: 320px;
     }
 
     .stockageContainer .commentContainer {
         width: 95%;
-        height: 60%;
-        min-height: 470px;
+        height: 100%;
+        min-height: 520px;
     }
 
     .stockageContainer .commentContainer p {
@@ -105,6 +105,7 @@
 
     .stockageContainer .commentContainer {
         width: 90%;
+        height: 100%;
         min-height: 300px;
     }
 

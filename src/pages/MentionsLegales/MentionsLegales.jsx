@@ -1,6 +1,5 @@
 import {useContext, useEffect, useState} from 'react'
 import {DataContext} from '../../utils/Context/DataContext'
-import mentionsLegales from '../../assets/pdf/mentionsLegales.pdf'
 import Contact from '../Contact/Contact'
 import  '../../style/MentionsLegales.css'
 
@@ -29,7 +28,7 @@ function MentionsLegales() {
                 </p>
                 <p></p>
                 <p></p>
-                <h3>PROPRIETAIRE DU SITE</h3>
+                <h5>PROPRIETAIRE DU SITE</h5>
                 <p>Co.TMF</p>
                 <p>FALEMPIN Maxime EI</p>
                 <p>72B, route du Petit Parenty - 62650 PARENTY</p>

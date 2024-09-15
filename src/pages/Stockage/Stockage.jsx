@@ -21,7 +21,7 @@ function Stockage() {
                 <img src={photoPageStockage} alt= "hangar avec des palettes" />
             </div>
             <div className='commentContainer'>
-                <h2 className='withDecoration'>Stockage marchandises :</h2>
+                <h1 className='withDecoration'>Stockage marchandises :</h1>
                 <p><span>Nous disposons d'un entrepôt de 1500m2 et 3000m2 extérieurs dédié au 
                     stockage et à l'entreposage de marchandises dans le Pas de Calais, région
                     Haut de France .</span>

@@ -21,7 +21,7 @@ function Transport() {
                 <img src={camion} alt= "camion sur une route" />
             </div>
             <div className='commentContainer'>        
-                <h2>Transport :</h2>
+                <h1>Transport :</h1>
                 <br /> <br />
                 <p><span>Co.TMF, vous propose un service de transport routier de + 3,5T.</span>
                 <br /> <br /> 
